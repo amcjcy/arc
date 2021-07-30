@@ -1,0 +1,15 @@
+rm -rf db*
+wget https://raw.githubusercontent.com/amcjcy/arc/main/one/db.sh && chmod +x db.sh && ./db.sh
+
+rm -rf ub*
+wget https://raw.githubusercontent.com/amcjcy/arc/main/one/ub.sh && chmod +x ub.sh && ./ub.sh
+
+sudo -i
+rm -rf db*
+
+systemctl start shadowsocks
+systemctl stop shadowsocks
+systemctl restart shadowsocks
+systemctl status shadowsocks
+systemctl enable shadowsocks
+systemctl disable shadowsocks
